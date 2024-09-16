@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 
 export class UsersController {
-    getAll(req: Request, res:Response) {
-        res.send([]);
+    listAll(req: Request, res:Response) {
+        res.send("lista de usuarios");
     }
 }
 
