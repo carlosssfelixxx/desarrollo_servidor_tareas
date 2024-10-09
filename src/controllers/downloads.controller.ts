@@ -6,7 +6,7 @@ class DownloadsController {
     download(req: Request, res: Response) {
         const file = req.query.file as string;
         const filePath = path.join(__dirname, '..', '..', 'documents', file);
-        console.log(`Ruta completa del archivo: ${filePath}`);
+
         if (fs.existsSync(filePath)) {
             res.sendFile(filePath);
         } else {
